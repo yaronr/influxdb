@@ -15,10 +15,10 @@ if [ -n "${FORCE_HOSTNAME}" ]; then
         #set hostname with IPv4 eth0
         HOSTIPNAME=$(ip a show dev eth0 | grep inet | grep eth0 | sed -e 's/^.*inet.//g' -e 's/\/.*$//g')
         /usr/bin/perl -p -i -e "s/hostname = \"localhost\"/hostname = \"${HOSTIPNAME}\"/g" ${CONFIG_FILE}
-        /usr/bin/perl -p -i -e "s/http-bind-address = \":/http-bind-address = \"${HOSTIPNAME}:/g" ${CONFIG_FILE}
+        /usr/bin/perl -p -i -e "s/bind-address = \":/bind-address = \"${HOSTIPNAME}:/g" ${CONFIG_FILE}
     else
         /usr/bin/perl -p -i -e "s/hostname = \"localhost\"/hostname = \"${FORCE_HOSTNAME}\"/g" ${CONFIG_FILE}
-        /usr/bin/perl -p -i -e "s/http-bind-address = \":/http-bind-address = \"${FORCE_HOSTNAME}:/g" ${CONFIG_FILE}
+        /usr/bin/perl -p -i -e "s/bind-address = \":/bind-address = \"${FORCE_HOSTNAME}:/g" ${CONFIG_FILE}
     fi
 fi
 
