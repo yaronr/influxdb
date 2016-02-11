@@ -22,6 +22,16 @@ if [ -n "${FORCE_HOSTNAME}" ]; then
     fi
 fi
 
+if [ -z "$DATANODE" ]; then
+    DATANODE="true"
+fi
+
+if [ "${DATANODE}" == "true" ]; then
+    /usr/bin/perl -p -i -e "s/ISDATANODE/true/g" ${CONFIG_FILE}
+else
+    /usr/bin/perl -p -i -e "s/ISDATANODE/false/g" ${CONFIG_FILE}
+fi
+
 # NOTE: 'seed-servers.' is nowhere to be found in config.toml, this cannot work anymore! NEED FOR REVIEW!
 # if [ -n "${SEEDS}" ]; then
 #     SEEDS=$(eval SEEDS=$SEEDS ; echo $SEEDS | grep '^\".*\"$' || echo "\""$SEEDS"\"" | sed -e 's/, */", "/g')
