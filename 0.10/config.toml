@@ -28,7 +28,8 @@ reporting-disabled = false
   heartbeat-timeout = "1s"
   leader-lease-timeout = "500ms"
   commit-timeout = "50ms"
-
+  logging-enabled = true
+  cluster-tracing = true
 ###
 ### [data]
 ###
