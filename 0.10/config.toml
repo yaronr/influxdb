@@ -41,7 +41,7 @@ reporting-disabled = false
 
 [data]
   # Controls if this node holds time series data shards in the cluster
-  enabled = true
+  enabled = ISDATANODE
   dir = "/data/db"
 
   # The following WAL settings are for the b1 storage engine used in 0.9.2. They won't
