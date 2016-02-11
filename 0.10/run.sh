@@ -22,11 +22,11 @@ if [ -n "${FORCE_HOSTNAME}" ]; then
     fi
 fi
 
-if [ -z "$DATANODE" ]; then
-    DATANODE="true"
+if [ -z "$ISDATANODE" ]; then
+    ISDATANODE="true"
 fi
 
-if [ "${DATANODE}" == "true" ]; then
+if [ "${ISDATANODE}" == "true" ]; then
     /usr/bin/perl -p -i -e "s/ISDATANODE/true/g" ${CONFIG_FILE}
 else
     /usr/bin/perl -p -i -e "s/ISDATANODE/false/g" ${CONFIG_FILE}
