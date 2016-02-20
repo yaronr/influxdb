@@ -2,7 +2,7 @@
 
 set -m
 CONFIG_FILE="/config/config.toml"
-INFLUX_HOST="localhost"
+INFLUX_HOST="$(hostname)"
 INFLUX_API_PORT="8086"
 API_URL="http://${INFLUX_HOST}:${INFLUX_API_PORT}"
 
