@@ -1,7 +1,5 @@
-tutum-docker-influxdb
+used-to-be-tutum-docker-influxdb
 =====================
-
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
 
 InfluxDB image
 
@@ -9,7 +7,7 @@ InfluxDB image
 Usage
 -----
 
-To create the image `tutum/influxdb`, execute the following command on tutum-docker-influxdb folder:
+To create the image `yaronr/influxdb`, execute the following command on tutum-docker-influxdb folder:
 
     docker build -t tutum/influxdb .
 
@@ -20,9 +18,8 @@ You can now push new image to the registry:
 Tags
 ----
 
-    tutum/influxdb:latest -> influxdb 0.9.6.1
-    tutum/influxdb:0.9    -> influxdb 0.9.6.1
-    tutum/influxdb:0.8.8  -> influxdb 0.8.8
+    tutum/influxdb:latest -> influxdb 0.10.1
+
 
 Running your InfluxDB image
 ---------------------------
