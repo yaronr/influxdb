@@ -30,6 +30,7 @@ EXPOSE 8086
 #EXPOSE 8099
 
 
+
 VOLUME ["/data"]
 
 CMD ["/run.sh"]
